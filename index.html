@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://fonts.cdnfonts.com/css/sf-pro-display"
+      rel="stylesheet"
+    />
+    <style>
+      @import url("https://fonts.cdnfonts.com/css/sf-pro-display");
+    </style>
+    <style>
+      body {
+        font-family: "SF Pro Display", sans-serif;
+      }
+      body > div:first-child {
+        background-color: #0a0a0a;
+        width: 428px;
+        /* height: 926px; */
+        display: flex;
+        flex-direction: column;
+      }
+      #number {
+        text-align: end;
+        padding-right: 40px;
+      }
+      .btn-grey {
+        background-color: #a7a7a7;
+        color: #0a0a0a;
+      }
+      .btn-black {
+        background-color: #333333;
+        color: white;
+      }
+      .btn-orange {
+        background-color: #fda00d;
+        color: white;
+      }
+      .grid-btn {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        column-gap: 12px;
+        row-gap: 12px;
+      }
+      .grid-btn > button {
+        border: none;
+        font-size: 34px;
+        width: 88px;
+        height: 88px;
+        border-radius: 50%;
+      }
+      .grid-btn .btn-black-bigger {
+        background-color: #333333;
+        color: white;
+        width: 100%;
+        grid-column: 1 / 3;
+        border-radius: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <div id="number" style="color: white; font-size: 60px">0</div>
+      <div class="grid-btn">
+        <button type="button" class="btn-grey" id="clear">AC</button>
+        <button type="button" class="btn-grey" id="typeNumber">⁺/₋</button>
+        <button type="button" class="btn-grey" id="percent">%</button>
+        <button type="button" class="btn-orange" id="divide">÷</button>
+        <button type="button" class="btn-black" id="7">7</button>
+        <button type="button" class="btn-black" id="8">8</button>
+        <button type="button" class="btn-black" id="9">9</button>
+        <button type="button" class="btn-orange" id="multiple">×</button>
+        <button type="button" class="btn-black" id="4">4</button>
+        <button type="button" class="btn-black" id="5">5</button>
+        <button type="button" class="btn-black" id="6">6</button>
+        <button type="button" class="btn-orange" id="minus">‒</button>
+        <button type="button" class="btn-black" id="1">1</button>
+        <button type="button" class="btn-black" id="2">2</button>
+        <button type="button" class="btn-black" id="3">3</button>
+        <button type="button" class="btn-orange" id="plus">+</button>
+        <button type="button" class="btn-black-bigger" id="0">0</button>
+        <button type="button" class="btn-black" id="coma">,</button>
+        <button type="button" class="btn-orange" id="equals">=</button>
+      </div>
+    </div>
+    <script>
+      //   const number = document.getElementById("number");
+      //   const clear = document.getElementById("clear");
+      //   const typeNumber = document.getElementById("typeNumber");
+      //   const percent = document.getElementById("percent");
+      //   const divide = document.getElementById("divide");
+      //   const multiple = document.getElementById("multiple");
+      //   const minus = document.getElementById("minus");
+      //   const plus = document.getElementById("plus");
+      //   const equals = document.getElementById("equals");
+      const one = document.getElementById("1");
+      const two = document.getElementById("2");
+      const three = document.getElementById("3");
+      const four = document.getElementById("4");
+      const five = document.getElementById("5");
+      const six = document.getElementById("6");
+      const seven = document.getElementById("7");
+      const eight = document.getElementById("8");
+      const nine = document.getElementById("9");
+      const zero = document.getElementById("0");
+
+      function numberOne(event) {
+        event.preventDefault();
+        number.textContent = 1;
+      }
+      one.addEventListener("click", numberOne);
+
+      function numberTwo(event) {
+        event.preventDefault();
+        number.textContent = 2;
+      }
+      two.addEventListener("click", numberTwo);
+
+      function numberThree(event) {
+        event.preventDefault();
+        number.textContent = 3;
+      }
+      three.addEventListener("click", numberThree);
+
+      function numberFour(event) {
+        event.preventDefault();
+        number.textContent = 4;
+      }
+      four.addEventListener("click", numberFour);
+
+      function numberFive(event) {
+        event.preventDefault();
+        number.textContent = 5;
+      }
+      five.addEventListener("click", numberFive);
+
+      function numberSix(event) {
+        event.preventDefault();
+        number.textContent = 6;
+      }
+      six.addEventListener("click", numberSix);
+
+      function numberSeven(event) {
+        event.preventDefault();
+        number.textContent = 7;
+      }
+      seven.addEventListener("click", numberSeven);
+
+      function numberEight(event) {
+        event.preventDefault();
+        number.textContent = 8;
+      }
+      eight.addEventListener("click", numberEight);
+
+      function numberNine(event) {
+        event.preventDefault();
+        number.textContent = 9;
+      }
+      nine.addEventListener("click", numberNine);
+
+      function numberZero(event) {
+        event.preventDefault();
+        number.textContent = 0;
+      }
+      zero.addEventListener("click", numberZero);
+    </script>
+  </body>
+</html>
