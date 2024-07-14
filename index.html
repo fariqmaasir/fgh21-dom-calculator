@@ -128,147 +128,53 @@
             if (number.textContent === "⁺/₋") {
               number.textContent = 0;
             } else if (number.textContent.includes("+")) {
-              const num = number.textContent
-                .slice(0, -1)
-                .slice(0, -2)
-                .split("+");
-              const numExcLast = parseInt(num.slice(0, -1));
-              console.log("ini adalah numexc ", numExcLast);
-              console.log(num);
-              let nums = 0;
-              num.forEach(function (last, index, array) {
+              const num = number.textContent.slice(0, -3).split("+");
+              const test = [];
+              num.forEach((last, index, array) => {
                 if (index === array.length - 1) {
-                  nums = last;
+                  test.push(last * -1);
+                } else {
+                  test.push(last);
                 }
               });
-              function checkNumber(a) {
-                if (a < 0) {
-                  return (a = a * -1);
-                }
-                if (a > 0) {
-                  return (a = a * -1);
-                }
-              }
-              const result = numExcLast + "+" + checkNumber(nums);
-              console.log("ini adalah result ", result);
-              // number.textContent = checkNumber(numExcLast);
+              const result = test.join("+");
               number.textContent = result;
             } else if (number.textContent.includes("‒")) {
-              const num = number.textContent
-                .slice(0, -1)
-                .slice(0, -2)
-                .split("‒");
-              const numExcLast = parseInt(num.slice(0, -1));
-              console.log(numExcLast);
-              console.log(num);
-              let nums = 0;
-              num.forEach(function (last, index, array) {
+              const num = number.textContent.slice(0, -3).split("‒");
+              const test = [];
+              num.forEach((last, index, array) => {
                 if (index === array.length - 1) {
-                  nums = last;
+                  test.push(last * -1);
+                } else {
+                  test.push(last);
                 }
               });
-              function checkNumber(a) {
-                if (a < 0) {
-                  return (a = a * -1);
-                }
-                if (a > 0) {
-                  return (a = a * -1);
-                }
-              }
-              const result = numExcLast + "‒" + checkNumber(nums);
-              console.log(result);
-              // number.textContent = checkNumber(numExcLast);
+              const result = test.join("‒");
               number.textContent = result;
             } else if (number.textContent.includes("×")) {
-              const num = number.textContent
-                .slice(0, -1)
-                .slice(0, -2)
-                .split("×");
-              const numExcLast = parseInt(num.slice(0, -1));
-              console.log(numExcLast);
-              console.log(num);
-              let nums = 0;
-              num.forEach(function (last, index, array) {
+              const num = number.textContent.slice(0, -3).split("×");
+              const test = [];
+              num.forEach((last, index, array) => {
                 if (index === array.length - 1) {
-                  nums = last;
+                  test.push(last * -1);
+                } else {
+                  test.push(last);
                 }
               });
-              function checkNumber(a) {
-                if (a < 0) {
-                  return (a = a * -1);
-                }
-                if (a > 0) {
-                  return (a = a * -1);
-                }
-              }
-              const result = numExcLast + "×" + checkNumber(nums);
-              console.log(result);
-              // number.textContent = checkNumber(numExcLast);
+              const result = test.join("×");
               number.textContent = result;
-            } else if (number.textContent.includes("+")) {
-              const num = number.textContent
-                .slice(0, -1)
-                .slice(0, -2)
-                .split("+");
-              const numExcLast = parseInt(num.slice(0, -1));
-              console.log(numExcLast);
-              console.log(num);
-              let nums = 0;
-              num.forEach(function (last, index, array) {
+            } else if (number.textContent.includes("÷")) {
+              const num = number.textContent.slice(0, -3).split("÷");
+              const test = [];
+              num.forEach((last, index, array) => {
                 if (index === array.length - 1) {
-                  nums = last;
+                  test.push(last * -1);
+                } else {
+                  test.push(last);
                 }
               });
-              function checkNumber(a) {
-                if (a < 0) {
-                  return (a = a * -1);
-                }
-                if (a > 0) {
-                  return (a = a * -1);
-                }
-              }
-              const result = numExcLast + "+" + checkNumber(nums);
-              console.log(result);
-              // number.textContent = checkNumber(numExcLast);
+              const result = test.join("÷");
               number.textContent = result;
-            } else if (number.textContent.includes("+")) {
-              const num = number.textContent
-                .slice(0, -1)
-                .slice(0, -2)
-                .split("+");
-              const numExcLast = parseInt(num.slice(0, -1));
-
-              console.log(numExcLast);
-              console.log(num);
-              let nums = 0;
-              num.forEach(function (last, index, array) {
-                if (index === array.length - 1) {
-                  nums = last;
-                }
-              });
-              function checkNumber(a) {
-                if (a < 0) {
-                  return (a = a * -1);
-                }
-                if (a > 0) {
-                  return (a = a * -1);
-                }
-              }
-              const result = numExcLast + "+" + checkNumber(nums);
-              console.log(result);
-              // number.textContent = checkNumber(numExcLast);
-              number.textContent = result;
-            } else {
-              const num = number.textContent.slice(0, -1).slice(0, -2);
-              function checkNumber(a) {
-                if (a < 0) {
-                  return (a = a * -1);
-                }
-                if (a > 0) {
-                  return (a = a * -1);
-                }
-              }
-              number.textContent = checkNumber(num);
             }
           }
           //----------ENTER BUTTON-------------
